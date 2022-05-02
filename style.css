@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-image: url("./img/Bau-troi-day-sao.png");
+  font-weight: 600;
+  font-size: 2.2rem;
+  padding: 4rem 9rem;
+}
+.col-xxl-8 {
+  padding: 0 12rem;
+}
+.btn {
+  display: inline-block;
+  background: #4cd137;
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem 3.5rem;
+  outline: none;
+  border: none;
+}
+.d-none {
+  display: none;
+}
+button.btn.btnSubmit {
+  margin-bottom: 2rem;
+}
+.exam__title {
+  margin-bottom: 6rem;
+}
+
+.subject-exam {
+  color: #fff;
+  font-family: "Great Vibes", cursive;
+  font-size: 6rem;
+  margin-top: 2rem;
+}
+
+.question {
+  background: #fff;
+  font-size: 6rem;
+  text-align: center;
+  padding: 2rem 3rem;
+  line-height: 1.08;
+  color: red;
+  border-radius: 2rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 3rem;
+}
+.question > h4,
+.Content {
+  font-size: 2.4rem;
+}
+.picture {
+  width: 40%;
+  position: relative;
+  padding: 0 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.answer__list {
+  width: 80%;
+  margin: auto;
+}
+.answer {
+  background: #fff;
+  height: auto;
+  border-radius: 2rem;
+  position: relative;
+  margin: 3rem 0.5rem;
+}
+.Content {
+  padding: 2rem 4rem;
+}
+.lable {
+  background: rgb(138, 135, 135);
+  font-weight: 800px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+
+.btn {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h3 {
+  color: #fff;
+  line-height: 1.2;
+  margin: 3rem 0;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.col-xxl-8 {
+  padding: unset;
+}
+.list__question {
+  max-height: 47rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  padding: 1.4rem;
+}
+.list__question::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+.card {
+  min-height: 95px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 20px;
+}
+
+.card-body {
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+}
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.answer:hover .lable {
+  background-color: #eab543;
+}
+.answer:hover .Content {
+  color: #eab543;
+}
+.active--lable {
+  background-color: #eab543;
+}
+.active--Content {
+  color: #eab543;
+}
+.card:hover .card-body {
+  transform: scale(1.2);
+  background-color: #eab543;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.true {
+  color: #2ecc71;
+}
+.bg--true {
+  background-color: #2ecc71;
+}
+.false {
+  color: #c0392b;
+}
+.bg--false {
+  background-color: #c0392b;
+}

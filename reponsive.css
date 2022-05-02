@@ -1,0 +1,43 @@
+@media (max-width: 576px) {
+  html {
+    font-size: 7px;
+  }
+  .exam__title {
+    margin-bottom: 0;
+  }
+  body {
+    padding: 0 2rem;
+  }
+  .list__question {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 3rem;
+  }
+  .card {
+    min-width: 10rem;
+    min-height: unset;
+    height: 10rem;
+    border-radius: 50%;
+    position: relative;
+  }
+  .card-body {
+  }
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 4px;
+  }
+  .answer__list {
+    width: 90%;
+  }
+  .card-text {
+  }
+  .col-xxl-8 {
+    padding: unset;
+  }
+}
+@media (max-width: 992px) {
+  .col-xxl-8 {
+    padding: unset;
+  }
+}
