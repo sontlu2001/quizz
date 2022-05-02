@@ -7,7 +7,9 @@
   }
   body {
     padding: 0 2rem;
+    position: relative;
   }
+
   .list__question {
     flex-wrap: nowrap;
     overflow-x: auto;

@@ -109,9 +109,10 @@ fetch(questionAPI)
     addInfoQuestion(index);
 
     //handle Click chuyen cau
-    var btnCauSau = document.querySelector(".btn");
+    var btnCauSau = document.querySelector(".btnNext");
     btnCauSau.onclick = function () {
-      let cardItem = document.querySelectorAll(".card-text");
+      let cardItem = document.querySelectorAll("p.card-text");
+      console.log(cardItem);
       //Gán đáp án cho card
       cardItem[index].innerHTML = answer;
       //Gán đán án cho list
@@ -121,6 +122,7 @@ fetch(questionAPI)
         return 0;
       }
       index++;
+      console.log(index);
       addInfoQuestion(index);
       ResetColor();
       answer = null;
