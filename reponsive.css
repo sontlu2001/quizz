@@ -9,9 +9,12 @@
     padding: 0 2rem;
     position: relative;
   }
+  .picture {
+    width: 100%;
+    margin-top: 2rem;
+  }
   .list__question {
     flex-wrap: nowrap;
-    overflow-x: auto;
     margin-bottom: 2rem;
   }
   .card {
