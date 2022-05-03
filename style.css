@@ -103,19 +103,23 @@ button.btn.btnSubmit {
   font-size: 2rem;
   left: 50%;
   transform: translateX(-50%);
+  text-transform: uppercase;
+}
+.btnNext {
+  margin-bottom: 2rem;
 }
 h3 {
   color: #fff;
   line-height: 1.2;
-  margin: 3rem 0;
   font-size: 2.4rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .col-xxl-8 {
   padding: unset;
 }
 .list__question {
-  max-height: 47rem;
+  max-height: 35rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
