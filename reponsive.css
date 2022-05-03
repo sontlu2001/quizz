@@ -47,4 +47,7 @@
   .col-xxl-8 {
     padding: unset;
   }
+  .question {
+    margin-top: 3rem;
+  }
 }

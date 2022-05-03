@@ -41,7 +41,9 @@ button.btn.btnSubmit {
   font-size: 6rem;
   margin-top: 2rem;
 }
-
+.picture {
+  margin-top: 2rem;
+}
 .question {
   background: #fff;
   font-size: 6rem;
@@ -53,11 +55,10 @@ button.btn.btnSubmit {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 3rem;
 }
 .question > h4,
 .Content {
-  padding: 1rem 4rem;
+  padding: 1.5rem 4rem;
   font-size: 2.4rem;
 }
 .picture {
@@ -117,10 +118,10 @@ h3 {
   padding: unset;
 }
 .list__question {
-  max-height: 35rem;
+  max-height: 38rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   overflow: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
