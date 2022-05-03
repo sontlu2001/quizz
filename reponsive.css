@@ -15,9 +15,9 @@
     margin-bottom: 2rem;
   }
   .card {
-    min-width: 10rem;
+    min-width: 12rem;
     min-height: unset;
-    height: 10rem;
+    height: 12rem;
     border-radius: 50%;
     position: relative;
   }
