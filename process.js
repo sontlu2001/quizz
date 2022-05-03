@@ -24,7 +24,7 @@ fetch(questionAPI)
     });
     var html = htmls.join("");
     document.querySelector(".list__question").innerHTML = html;
-    //function render cau hoi va dap an
+
     //Reset active
     function ResetColor() {
       let listAnswer__Contents = document.querySelectorAll(".answer .Content");
@@ -44,13 +44,13 @@ fetch(questionAPI)
       let answerD = document.querySelector(".answerD");
       answerD.className = "answer answerD";
     }
+    //function render cau hoi va dap an
     function addInfoQuestion(index) {
       let titleQuestion = document.querySelector(".question>h4");
       //Title
       titleQuestion.innerHTML = listquestion[index].CauHoi;
       //Picture
       if (listquestion[index].HinhAnh != null) {
-        console.log(listquestion[index].HinhAnh);
         let picture = document.querySelector(".picture");
         picture.className = "picture";
         picture.src = `${listquestion[index].HinhAnh}`;
@@ -110,22 +110,66 @@ fetch(questionAPI)
     //handle Click chuyen cau
     var btnCauSau = document.querySelector(".btnNext");
     btnCauSau.onclick = function () {
-      let cardItem = document.querySelectorAll("p.card-text");
-      console.log(cardItem);
-      //Gán đáp án cho card
-      cardItem[index].innerHTML = answer;
-      //Gán đán án cho list
-      listquestion[index].TraLoi = answer;
-      if (index === listquestion.length - 1) {
-        alert("Đã hết câu hỏi");
-        return 0;
+      if (checkSubmit) {
+        index++;
+        addInfoQuestion(index);
+        ResetColor();
+        renderResult(index);
+      } else {
+        let cardItem = document.querySelectorAll("p.card-text");
+        //Gán đáp án cho card
+        cardItem[index].innerHTML = answer;
+        //Gán đán án cho list
+        listquestion[index].TraLoi = answer;
+        if (index === listquestion.length - 1) {
+          alert("Đã hết câu hỏi");
+          return 0;
+        }
+        index++;
+        addInfoQuestion(index);
+        ResetColor();
+        answer = "";
       }
-      index++;
-      console.log(index);
-      addInfoQuestion(index);
-      ResetColor();
-      answer = null;
     };
+
+    //function hiển thị đáp án đúng or sai
+    function renderResult(pos) {
+      let answerA = document.querySelector(".answerA");
+      let answerB = document.querySelector(".answerB");
+      let answerC = document.querySelector(".answerC");
+      let answerD = document.querySelector(".answerD");
+      switch (listquestion[pos].DapAn) {
+        case "A":
+          answerA.className = "answer answerA bg--true";
+          break;
+        case "B":
+          answerB.className = "answer answerB bg--true";
+          break;
+        case "C":
+          answerC.className = "answer answerC bg--true";
+          break;
+        case "D":
+          answerD.className = "answer answerD bg--true";
+          break;
+      }
+      if (listquestion[pos].DapAn !== listquestion[pos].TraLoi) {
+        switch (listquestion[pos].TraLoi) {
+          case "A":
+            answerA.className = "answer answerA bg--false";
+            break;
+          case "B":
+            answerB.className = "answer answerB bg--false";
+            break;
+          case "C":
+            answerC.className = "answer answerC bg--false";
+            break;
+          case "D":
+            answerD.className = "answer answerD bg--false";
+            break;
+        }
+      }
+    }
+
     // handleSubmit
     let btnSubmit = document.querySelector("button.btn.btnSubmit");
     btnSubmit.onclick = function () {
@@ -160,40 +204,8 @@ fetch(questionAPI)
         DapAn = "";
         addInfoQuestion(pos);
         if (checkSubmit) {
-          let answerA = document.querySelector(".answerA");
-          let answerB = document.querySelector(".answerB");
-          let answerC = document.querySelector(".answerC");
-          let answerD = document.querySelector(".answerD");
-          switch (listquestion[pos].DapAn) {
-            case "A":
-              answerA.className = "answer answerA bg--true";
-              break;
-            case "B":
-              answerB.className = "answer answerB bg--true";
-              break;
-            case "C":
-              answerC.className = "answer answerC bg--true";
-              break;
-            case "D":
-              answerD.className = "answer answerD bg--true";
-              break;
-          }
-          if (listquestion[pos].DapAn !== listquestion[pos].TraLoi) {
-            switch (listquestion[pos].TraLoi) {
-              case "A":
-                answerA.className = "answer answerA bg--false";
-                break;
-              case "B":
-                answerB.className = "answer answerB bg--false";
-                break;
-              case "C":
-                answerC.className = "answer answerC bg--false";
-                break;
-              case "D":
-                answerD.className = "answer answerD bg--false";
-                break;
-            }
-          }
+          //Hiển thị đáp án đúng or sai
+          renderResult(pos);
         }
       };
     });
