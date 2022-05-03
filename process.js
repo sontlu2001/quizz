@@ -47,8 +47,7 @@ fetch(questionAPI)
     function addInfoQuestion(index) {
       let titleQuestion = document.querySelector(".question>h4");
       //Title
-      titleQuestion.innerHTML =
-        `Câu ${listquestion[index].ID}: ` + listquestion[index].CauHoi;
+      titleQuestion.innerHTML = listquestion[index].CauHoi;
       //Picture
       if (listquestion[index].HinhAnh != null) {
         console.log(listquestion[index].HinhAnh);
