@@ -1,6 +1,6 @@
 @media (max-width: 576px) {
   html {
-    font-size: 7px;
+    font-size: 5px;
   }
   .exam__title {
     margin-bottom: 0;
@@ -13,41 +13,95 @@
     width: 100%;
     margin-top: 2rem;
   }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
   .list__question {
-    flex-wrap: nowrap;
-    margin-bottom: 2rem;
+    max-width: 100vw;
+    display: flex;
+    margin-bottom: 4rem;
+  }
+  .wapper_left {
+    width: unset;
+  }
+  .btn {
+    position: unset;
+    left: unset;
+    transform: unset;
   }
   .question {
     margin-bottom: unset;
   }
   .card {
-    min-width: 11.3rem;
-    min-height: unset;
-    height: 11.3rem;
+    min-width: 11.3rem !important;
+    height: 11.3rem !important;
     border-radius: 50%;
     position: relative;
-  }
-  .card-body {
   }
   .card-title {
     font-size: 1.8rem;
     font-weight: 700;
     margin: 4px;
   }
+  .card:hover {
+    border-radius: 50%;
+  }
   .answer__list {
     width: 90%;
   }
-  .card-text {
-  }
-  .col-xxl-8 {
-    padding: unset;
-  }
 }
-@media (max-width: 992px) {
-  .col-xxl-8 {
-    padding: unset;
+@media screen and (max-width: 1600px) and (min-width: 576px) {
+  html {
+    font-size: 10px;
   }
   .question {
     margin-top: 3rem;
+  }
+  .container {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .card {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: relative;
+  }
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  button.btn.btnSubmit {
+    margin-bottom: 2rem;
+  }
+  .wapper_left {
+    width: unset;
+  }
+  .btn {
+    position: unset;
+    left: unset;
+    transform: unset;
+  }
+  .card:hover {
+    border-radius: 50%;
+  }
+  .list__question {
+    max-height: 20rem;
+  }
+  .picture {
+    left: unset;
+    transform: unset;
   }
 }

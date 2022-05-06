@@ -15,10 +15,8 @@ fetch(questionAPI)
     var htmls = listquestion.map((question, index) => {
       return `
           <div id=${question.ID} class="card">
-              <div class="card-body">
-                <h5 class="card-title">Câu ${question.ID}</h5>
-                <p class="card-text">?</p>
-              </div>
+              <h4 class="card-title">Câu ${question.ID}</h4>
+              <p class="card-text">?</p>
             </div>
           `;
     });
@@ -48,7 +46,10 @@ fetch(questionAPI)
     function addInfoQuestion(index) {
       let titleQuestion = document.querySelector(".question>h4");
       //Title
+      let str = listquestion[index].CauHoi;
+
       titleQuestion.innerHTML = listquestion[index].CauHoi;
+
       //Picture
       if (listquestion[index].HinhAnh != null) {
         let picture = document.querySelector(".picture");
@@ -103,6 +104,7 @@ fetch(questionAPI)
         answerD__lable.className = "lable active--lable";
         answerD__Content.className = "Content active--Content";
       };
+      MathJax.typesetPromise();
     }
     //Add cau dau tien
     addInfoQuestion(index);

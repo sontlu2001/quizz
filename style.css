@@ -12,9 +12,7 @@ body {
   font-size: 2.2rem;
   padding: 4rem 9rem;
 }
-.col-xxl-8 {
-  padding: 0 12rem;
-}
+
 .btn {
   display: inline-block;
   background: #4cd137;
@@ -43,6 +41,15 @@ button.btn.btnSubmit {
 }
 .picture {
   margin-top: 2rem;
+}
+.container {
+  display: flex;
+}
+.wapper_left {
+  width: 30%;
+}
+.wapper_right {
+  width: 70%;
 }
 .question {
   background: #fff;
@@ -81,7 +88,7 @@ button.btn.btnSubmit {
 }
 .lable {
   background: rgb(138, 135, 135);
-  font-weight: 800px;
+  font-weight: 800;
   color: #fff;
   display: flex;
   align-items: center;
@@ -92,7 +99,7 @@ button.btn.btnSubmit {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -20px;
+  left: -2rem;
 }
 
 .btn {
@@ -119,9 +126,10 @@ h3 {
 }
 .list__question {
   max-height: 38rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
   overflow: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -132,19 +140,21 @@ h3 {
   display: none;
 }
 .card {
-  min-height: 95px;
   text-align: center;
-  font-size: 25px;
-  border-radius: 20px;
+  font-size: 2.5rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 1rem;
 }
 
-.card-body {
-  padding: 1rem 1.5rem;
-  font-size: 2.5rem;
-}
 .card-title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 .answer:hover .lable {
   background-color: #eab543;
@@ -158,11 +168,10 @@ h3 {
 .active--Content {
   color: #eab543;
 }
-.card:hover .card-body {
+.card:hover {
   transform: scale(1.2);
   background-color: #eab543;
-  overflow: hidden;
-  border-radius: 20px;
+  border-radius: 2rem;
 }
 .true {
   color: #2ecc71;
