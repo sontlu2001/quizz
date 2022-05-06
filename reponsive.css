@@ -1,6 +1,6 @@
 @media (max-width: 576px) {
   html {
-    font-size: 5px;
+    font-size: 7px;
   }
   .exam__title {
     margin-bottom: 0;
@@ -28,6 +28,9 @@
     margin-bottom: 4rem;
   }
   .wapper_left {
+    width: unset;
+  }
+  .wapper_right {
     width: unset;
   }
   .btn {
@@ -87,6 +90,9 @@
     margin-bottom: 2rem;
   }
   .wapper_left {
+    width: unset;
+  }
+  .wapper_right {
     width: unset;
   }
   .btn {
