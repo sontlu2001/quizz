@@ -112,6 +112,9 @@ fetch(questionAPI)
     //handle Click chuyen cau
     var btnCauSau = document.querySelector(".btnNext");
     btnCauSau.onclick = function () {
+      //Đổi màu card
+      var listCardQuestion = document.querySelectorAll(".card");
+      listCardQuestion[index].classList.add("active--lable");
       if (checkSubmit) {
         index++;
         addInfoQuestion(index);
