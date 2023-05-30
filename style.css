@@ -27,7 +27,7 @@ body {
   display: none;
 }
 button.btn.btnSubmit {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .exam__title {
   margin-bottom: 6rem;
@@ -44,6 +44,7 @@ button.btn.btnSubmit {
 }
 .container {
   display: flex;
+  gap: 95px;
 }
 .wapper_left {
   width: 35%;
@@ -125,7 +126,7 @@ h3 {
   padding: unset;
 }
 .list__question {
-  max-height: 38rem;
+  max-height: 41rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 2rem;
